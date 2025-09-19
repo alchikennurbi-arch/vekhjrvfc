@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      body {
+        display: grid;
+        min-height: 100vh;
+        place-items: center;
+        place-content: center;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        margin-left: 95px;
+        width: 1400px;
+        height: 1200px;
+        display: grid;
+        background-color: rgb(255, 255, 255);
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(12, 1fr);
+        gap: 25px;
+        row-gap: 50px;
+        padding: 30px;
+      }
+
+      .box1 {
+        display: grid;
+        grid-column: 1/2;
+        grid-row: 1/2;
+        border-radius: 20px;
+      }
+      .second {
+        background-color: rgba(128, 128, 128, 0.529);
+        position: absolute;
+        z-index: 1;
+        height: 350px;
+        width: 250px;
+        border-radius: 20px;
+        opacity: 0;
+      }
+
+      .second:hover {
+        opacity: 1;
+      }
+      .one {
+        position: absolute;
+        height: 350px;
+        width: 250px;
+        border-radius: 20px;
+        opacity: 1;
+      }
+
+      .box2 {
+        display: grid;
+        grid-column: 2/3;
+        grid-row: 1/2;
+        border-radius: 20px;
+      }
+
+      .two {
+        position: absolute;
+        height: 350px;
+        width: 250px;
+        border-radius: 20px;
+        opacity: 1;
+      }
+      .secondd.hover {
+        opacity: 1;
+      }
+      .secondd {
+        position: absolute;
+        z-index: 1;
+        background-color: rgba(128, 128, 128, 0.547);
+        height: 350px;
+        width: 250px;
+        border-radius: 20px;
+        opacity: 0;
+      }
+      .box3 {
+        display: grid;
+        grid-column: 3/4;
+        border-radius: 20px;
+        grid-row: 1/2;
+      }
+      .three {
+        height: 350px;
+        width: 250px;
+        border-radius: 20px;
+        border-radius: 20px;
+      }
+      .box4 {
+        display: grid;
+        grid-column: 4/5;
+        border-radius: 20px;
+        grid-row: 1/4;
+        position: absolute;
+        left: 950px;
+      }
+      .four {
+        height: 160px;
+        width: 500px;
+        border-radius: 20px;
+        border-radius: 20px;
+      }
+      .box5 {
+        display: grid;
+        grid-column: 5/6;
+        grid-row: 1/2;
+        position: absolute;
+        border-radius: 20px;
+        position: absolute;
+        left: 950px;
+        top: 280px;
+      }
+      .five {
+        height: 170px;
+        width: 500px;
+        border-radius: 20px;
+      }
+      .box6 {
+        display: grid;
+        grid-column: 1/2;
+        grid-row: 2/3;
+        border-radius: 20px;
+      }
+      .six {
+        height: 350px;
+        width: 250px;
+        border-radius: 20px;
+      }
+      .box7 {
+        display: grid;
+        grid-column: 2/3;
+        grid-row: 2/3;
+      }
+      .seven {
+        height: 350px;
+        width: 250px;
+        border-radius: 20px;
+        border-radius: 20px;
+      }
+      .box8 {
+        display: grid;
+        grid-column: 3/4;
+        grid-row: 2/3;
+      }
+      .eight {
+        height: 350px;
+        width: 250px;
+        border-radius: 20px;
+        border-radius: 20px;
+      }
+      .box9 {
+        display: grid;
+        grid-column: 4/5;
+        grid-row: 2/3;
+      }
+      .nine {
+        height: 350px;
+        width: 250px;
+        border-radius: 20px;
+        border-radius: 20px;
+      }
+      .box10 {
+        display: grid;
+        grid-column: 5/6;
+        grid-row: 2/3;
+      }
+      .ten {
+        height: 350px;
+        width: 250px;
+        border-radius: 20px;
+        border-radius: 20px;
+      }
+      .box11 {
+        display: grid;
+        grid-column: 1/2;
+        grid-row: 3/4;
+      }
+      .eleven {
+        height: 350px;
+        width: 250px;
+        border-radius: 20px;
+        border-radius: 20px;
+      }
+      .box12 {
+        display: grid;
+        grid-column: 2/3;
+        grid-row: 3/4;
+      }
+      .tweleve {
+        height: 350px;
+        width: 250px;
+        border-radius: 20px;
+        border-radius: 20px;
+      }
+      .box13 {
+        display: grid;
+        grid-column: 3/4;
+        grid-row: 3/4;
+      }
+
+      .thirteen {
+        height: 350px;
+        width: 250px;
+        border-radius: 20px;
+        border-radius: 20px;
+      }
+      .box14 {
+        display: grid;
+        grid-column: 4/5;
+        grid-row: 3/4;
+      }
+      .fourteen {
+        height: 350px;
+        width: 250px;
+        border-radius: 20px;
+        border-radius: 20px;
+      }
+      .box15 {
+        display: grid;
+        grid-column: 5/6;
+        grid-row: 3/4;
+      }
+      .fivteen {
+        height: 350px;
+        width: 250px;
+        border-radius: 20px;
+        border-radius: 20px;
+      }
+      .box16 {
+        display: grid;
+        grid-column: 1/2;
+        grid-row: 4/5;
+      }
+      .sixteen {
+        height: 350px;
+        width: 250px;
+        border-radius: 20px;
+        border-radius: 20px;
+      }
+      .box17 {
+        display: grid;
+        grid-column: 2/3;
+        grid-row: 4/5;
+      }
+      .seventeen {
+        height: 350px;
+        width: 250px;
+        border-radius: 20px;
+        border-radius: 20px;
+      }
+      .box18 {
+        display: grid;
+        grid-column: 3/4;
+        grid-row: 4/5;
+      }
+      .eighteen {
+        height: 350px;
+        width: 250px;
+        border-radius: 20px;
+        border-radius: 20px;
+      }
+      .box19 {
+        display: grid;
+        grid-column: 4/5;
+        grid-row: 4/5;
+      }
+      .ninteen {
+        height: 350px;
+        width: 250px;
+        border-radius: 20px;
+        border-radius: 20px;
+      }
+      .box20 {
+        display: grid;
+        grid-column: 5/6;
+        grid-row: 4/5;
+      }
+      .twenty {
+        height: 350px;
+        width: 250px;
+        border-radius: 20px;
+        border-radius: 20px;
+      }
+      .first {
+        margin-top: 10px;
+        width: 1200px;
+        height: 50px;
+        margin-left: -90px;
+        color: gray;
+        font-size: 20px;
+        box-sizing: border-box;
+        padding: 15px;
+        background-color: rgba(225, 225, 225);
+        padding-left: 40px;
+        border-radius: 20px;
+        border: none;
+      }
+      .sear {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: 25px;
+        left: 100px;
+      }
+      .profile {
+        width: 70px;
+        height: 60px;
+        margin-left: 1350px;
+        margin-top: -50px;
+      }
+      .pin {
+        top: 10px;
+        left: 2px;
+        position: absolute;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+      }
+      .line {
+        width: 2px;
+        height: 1200px;
+        color: gray;
+        position: absolute;
+        top: 0;
+        left: 50px;
+      }
+      .settings {
+        position: absolute;
+        position: fixed;
+        top: 780px;
+      }
+    </style>
+    <div class="line"></div>
+    <div class="pin">
+      <img src="u.png" height="80px" width="80px" />
+      <img src="o.png" height="80px" width="80px" />
+      <img src="t.png" height="80px" width="80px" />
+      <img src="d.png" height="80px" width="80px" />
+      <img src="f.png" height="80px" width="80px" />
+    </div>
+    <div class="settings">
+      <img src="s.png" width="60px" height="60px" />
+    </div>
+    <img class="sear" src="i.png" />
+    <input class="first" type="text" id="search" value="Search" />
+    <img class="profile" src="r.png" alt="profile" />
+
+    <div class="container">
+      <div class="box1"><img class="one" src="banana.png" /></div>
+      <div class="second"></div>
+      <div class="box2"><img class="two" src="flower.png" /></div>
+      <div class="box3"><img class="three" src="e.png" /></div>
+      <div class="box4"><img class="four" src="draw.png" /></div>
+      <div class="box5"><img class="five" src="girl.png" /></div>
+      <div class="box6"><img class="six" src="q.png" /></div>
+      <div class="box7"><img class="seven" src="eyes.png" /></div>
+      <div class="box8"><img class="eight" src="ielts.png" /></div>
+      <div class="box9"><img class="nine" src="white.png" /></div>
+      <div class="box10"><img class="ten" src="fruits.png" /></div>
+      <div class="box11"><img class="eleven" src="g.png" /></div>
+      <div class="box12"><img class="tweleve" src="h.png" /></div>
+      <div class="box13"><img class="thirteen" src="tr.png" /></div>
+      <div class="box14"><img class="fourteen" src="girl.png" /></div>
+      <div class="box15"><img class="fivteen" src="beach.png" /></div>
+      <div class="box16"><img class="sixteen" src="e.png" /></div>
+      <div class="box17"><img class="seventeen" src="new.png" /></div>
+      <div class="box18"><img class="eighteen" src="night.png" /></div>
+      <div class="box19"><img class="ninteen" src="photos.png" /></div>
+      <div class="box20"><img class="tweleve" src="tr.png" /></div>
+    </div>
+  </body>
+</html>
